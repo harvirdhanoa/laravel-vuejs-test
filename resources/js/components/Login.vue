@@ -28,10 +28,10 @@
 
         methods: {
             login() {
-                this.axios.post('http://127.0.0.1:8000/api/login', this.user)
+                axios.post('http://127.0.0.1:8000/api/login', this.user)
                     .then(({data}) => {
                         Auth.login(data.access_token,data.user); //set local storage
-                        this.$router.push('/dashboard');
+                        this.$router.push('/products');
                     })
                     .catch((error) => {
                         console.log(error);
