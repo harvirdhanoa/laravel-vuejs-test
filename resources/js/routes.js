@@ -8,7 +8,7 @@ import Products from './components/Products.vue';
 
 const routes = [
     {
-        path: '/login',
+        path: '/',
         component: Login,
         name: "Login"
     },
@@ -28,13 +28,10 @@ const routes = [
  });
 
 router.beforeEach((to, from, next) => {
-    if (to.matched.some(record => record.meta.requiresAuth) ) {
-        if (Auth.check()) {
-            next();
-            return;
-        } else {
-            router.push('/login');
-        }
+    //if (to.matched.some(record => record.meta.requiresAuth) ) {
+    if (to.meta.requiresAuth && !Auth.check()) {
+        router.push('/');
+        router.go();
     } else {
         next();
     }

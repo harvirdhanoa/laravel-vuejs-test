@@ -1,4 +1,4 @@
 @extends('layout.app')
 @section('content')
-  <login />
+  <products />
 @endsection

@@ -37,7 +37,12 @@ class UserSeeder extends Seeder
                 'name'=>  $faker->name,
                 'email' =>  $faker->email,
                 'password' => bcrypt('Password')
-            ]            
+            ],
+            [
+                'name'=>  'test user',
+                'email' =>  'laravelvue@mail.com',
+                'password' => bcrypt('Password')
+            ]             
         ];
         
         foreach ($users as $key => $value) {

@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
     {
         $products = [
             [
-                'name'=> 'Apple Watch 7',
+                'name'=> 'Apple Watch 7', 
                 'price' => '999.99',
                 'is_active' => 1,
                 'user_id' => 1

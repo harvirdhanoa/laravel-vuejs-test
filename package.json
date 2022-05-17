@@ -24,7 +24,11 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "dotenv": "^16.0.1",
+        "moment": "^2.29.3",
         "vue-axios": "^3.4.1",
-        "vue-router": "^3.5.4"
+        "vue-router": "^3.5.4",
+        "vue-toast-notification": "^0.6.2",
+        "vuejs-datepicker": "^1.6.2"
     }
 }
